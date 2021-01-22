@@ -30,13 +30,13 @@
   }
 }
 .whatwedo-list {
-  display: flex;
+  // display: flex;
 
   .item {
     display: block;
     position: relative;
   }
-  .item:not(:last-child) {
-    margin-right: 30px;
-  }
+  // .item:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 }

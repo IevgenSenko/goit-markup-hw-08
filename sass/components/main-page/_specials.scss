@@ -1,6 +1,10 @@
 .specials {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media screen and (min-width: 769px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  padding-top: 60px;
+  padding-bottom: 60px;
   h2 {
     display: none;
   }
@@ -11,6 +15,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 480px) {
+      text-align: center;
+    }
   }
   p {
     font-size: 14px;
@@ -21,19 +29,29 @@
   }
 }
 .specials-list {
-  display: flex;
+  @media screen and (min-width: 481px) {
+    display: flex;
+  }
   .item {
     display: block;
-    width: 270px;
+    width: 100%;
+    @media screen and (min-width: 769px) {
+      width: 270px;
+    }
   }
   .item:not(:last-child) {
     margin-right: 30px;
+    @media screen and (max-width: 480px) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
   .item::before {
     content: "";
     display: block;
     background-color: #f5f4fa;
     height: 120px;
+    width: 100%;
     margin-bottom: 30px;
     border-radius: 4px;
     background-repeat: no-repeat;

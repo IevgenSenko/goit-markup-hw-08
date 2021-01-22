@@ -1,29 +1,48 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 
   color: #ffffff;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../img/fon.jpg);
+    url(../img/fon-mobile.jpg);
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 1600px;
+  max-width: 480px;
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/fon.jpg);
+    max-width: 1600px;
+  }
   > h1 {
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
   > div {
     text-align: center;
