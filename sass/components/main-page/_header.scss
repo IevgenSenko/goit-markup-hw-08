@@ -1,44 +1,77 @@
 .page-header {
   background-color: #ffffff;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border: 1px solid #ececec;
 }
-nav li :hover,
-nav li :focus {
-  color: $main-color;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 59px;
 }
-// .main-nav {
-//   // display: flex;
-//   // align-items: center;
-
-//   .item {
-//     // position: relative;
-//   }
-// }
-.contacts {
-  // display: flex;
-  margin-left: auto;
-
+.main-nav {
+  position: absolute;
+  top: 59px;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #ececec;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
   .item {
-    // display: inline-flex;
-    // align-items: center;
-
     font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 21px;
     letter-spacing: 0.02em;
   }
-  .item:not(:last-child) {
-    margin-right: 50px;
+
+  .item :hover,
+  .item :focus {
+    color: $main-color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
-  // .mail {
-  //   // display: inline-flex;
-  //   // align-items: center;
-  // }
-  // .tel {
-  //   // display: inline-flex;
-  //   // align-items: center;
-  // }
+
+  @media screen and (min-width: 481px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contacts {
+  @media screen and (min-width: 769px) {
+    display: flex;
+  }
+  margin-left: auto;
+
+  .item:not(:last-child) {
+    margin-bottom: 16px;
+  }
+  .item {
+    @media screen and (min-width: 769px) {
+      display: inline-flex;
+      align-items: center;
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+    // font-weight: 500;
+    // font-size: 14px;
+    // line-height: 16px;
+    // letter-spacing: 0.02em;
+  }
+  @media screen and (min-width: 769px) {
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  .mail {
+    display: inline-flex;
+    align-items: center;
+  }
+  .tel {
+    display: inline-flex;
+    align-items: center;
+  }
   .mail-icon {
     height: 12px;
     width: 16px;
@@ -51,51 +84,58 @@ nav li :focus {
   }
   a {
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
     color: #757575;
     fill: currentColor;
     @extend %transition;
   }
-  a:hover,
-  a:focus {
-    color: $main-color;
-    fill: currentColor;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
 }
 .site-nav {
-  // display: flex;
-  // margin-left: 93px;
-
-  .item:not(:last-child) {
-    margin-right: 50px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 769px) {
+    display: flex;
+    margin-left: 93px;
+  }
+  .item {
+    margin-bottom: 40px;
+  }
+  .link {
+    position: relative;
+    display: inline-block;
+  }
+  @media screen and (min-width: 769px) {
+    .item:not(:last-child) {
+      margin-right: 50px;
+    }
   }
   a {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    @media screen and (min-width: 769px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      line-height: 16.41px;
+      display: block;
+    }
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16.41px;
-    letter-spacing: 0.02em;
+    // font-weight: 500;
+    // font-size: 18px;
+    // line-height: 21px;
+    // letter-spacing: 0.02em;
     @extend %transition;
   }
-  // .link.current::after {
-  //   display: block;
-  //   position: absolute;
-  //   left: 0;
-  //   bottom: 0;
-  //   content: "";
-  //   width: 100%;
-  //   height: 4px;
-  //   border-radius: 2px;
-  //   background-color: $main-color;
-  // }
-  // .link.current {
-  //   color: $main-color;
-  // }
+  .link.current::after {
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $main-color;
+  }
+  .link.current {
+    color: $main-color;
+  }
 }
 .logo {
   padding-top: 24px;

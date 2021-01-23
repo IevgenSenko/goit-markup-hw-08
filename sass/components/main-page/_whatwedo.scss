@@ -1,4 +1,7 @@
 .whatwedo {
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
   padding-bottom: 94px;
   h2 {
     margin-bottom: 50px;
@@ -30,13 +33,13 @@
   }
 }
 .whatwedo-list {
-  // display: flex;
+  display: flex;
 
   .item {
     display: block;
     position: relative;
   }
-  // .item:not(:last-child) {
-  //   margin-right: 30px;
-  // }
+  .item:not(:last-child) {
+    margin-right: 30px;
+  }
 }

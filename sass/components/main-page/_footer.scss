@@ -1,14 +1,18 @@
 .footer {
   .logo {
     display: block;
-
     margin-bottom: 20px;
     padding: 0;
 
     color: #ffffff;
+    @media screen and (max-width: 480px) {
+      text-align: center;
+    }
   }
   .container {
-    display: flex;
+    @media screen and (min-width: 481px) {
+      display: flex;
+    }
   }
 }
 footer {
@@ -27,6 +31,10 @@ footer {
   }
 }
 address {
+  @media screen and (max-width: 480px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
   p {
     margin-bottom: 8px;
 
@@ -59,24 +67,41 @@ address {
   text-transform: uppercase;
 
   color: #ffffff;
+  @media screen and (max-width: 480px) {
+    text-align: center;
+  }
 }
 .join-webs {
-  margin-left: 70px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 769px) {
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
 }
 .footer-form {
   margin-left: auto;
   margin-right: 0;
 
   label {
-    display: inline-block;
-    padding-top: 12px;
-    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .form-subs {
-  display: flex;
+  @media screen and (min-width: 769px) {
+    display: flex;
+  }
   .btn {
-    display: inline-flex;
+    @media screen and (max-width: 480px) {
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 20px;
+    }
+
+    display: block;
+    display: flex;
     align-items: center;
 
     .airplane-icon {
@@ -88,10 +113,11 @@ address {
   .footer-email {
     display: flex;
     justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 16px;
     margin-right: 12px;
-
-    width: 358px;
+    width: 100%;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -103,5 +129,9 @@ address {
     color: rgba(255, 255, 255, 0.6);
     background-color: #2f303a;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+
+    @media screen and (min-width: 769px) {
+      width: 358px;
+    }
   }
 }
