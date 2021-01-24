@@ -10,6 +10,8 @@
 
   @extend %transition;
 
+  overflow-y: scroll;
+
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -20,11 +22,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 450px;
+    width: 100%;
+  }
 }
 .data-modal-close {
   position: absolute;
@@ -56,7 +65,7 @@
   }
 }
 .modal-form {
-  // padding: 40px;
+  padding: 40px;
 
   * {
     display: block;
@@ -67,7 +76,7 @@
   }
   .comment {
     resize: none;
-    width: 448px;
+    width: 100%;
     height: 120px;
 
     padding: 12px 16px;
@@ -128,11 +137,15 @@
     align-items: center;
     padding: 0;
 
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.03em;
-    line-height: 1.71;
 
     color: #757575;
+    @media screen and (min-width: 769px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 }
 .form-field {
@@ -159,22 +172,27 @@
 .modal-agreement {
   .icon-check {
     display: inline-block;
-    width: 16px;
+    min-width: 16px;
     height: 15px;
     border: 1px solid #212121;
     border-radius: 2px;
-    margin-right: 8.38px;
+    margin-right: 8px;
 
     @extend %transition;
   }
   a {
     margin-left: 4px;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 14px;
     letter-spacing: 0.03em;
     text-decoration-line: underline;
 
     color: $main-color;
+
+    @media screen and (min-width: 769px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 }
 .checkbox {

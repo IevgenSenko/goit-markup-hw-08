@@ -5,6 +5,10 @@ body {
   color: #212121;
 }
 
+.modal-open {
+  overflow: hidden;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -63,6 +67,7 @@ a {
 .page-header {
   background-color: #ffffff;
   border: 1px solid #ececec;
+  position: relative;
 }
 
 .header-container {
@@ -79,8 +84,9 @@ a {
 }
 
 .main-nav {
+  display: none;
   position: absolute;
-  top: 59px;
+  top: 100%;
   left: 0;
   z-index: 2;
   width: 100%;
@@ -98,6 +104,10 @@ a {
   letter-spacing: 0.02em;
 }
 
+.main-nav.is-open {
+  display: block;
+}
+
 .main-nav .item :hover,
 .main-nav .item :focus {
   color: #2196f3;
@@ -105,7 +115,7 @@ a {
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .main-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -120,7 +130,7 @@ a {
   margin-left: auto;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   .contacts {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -132,7 +142,7 @@ a {
   margin-bottom: 16px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1600px) {
   .contacts .item {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -145,7 +155,7 @@ a {
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1600px) {
   .contacts .item:not(:last-child) {
     margin-right: 50px;
   }
@@ -191,7 +201,7 @@ a {
   margin-bottom: 60px;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1600px) {
   .site-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -209,13 +219,13 @@ a {
   display: inline-block;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1600px) {
   .site-nav .item:not(:last-child) {
     margin-right: 50px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1600px) {
   .site-nav a {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -241,8 +251,6 @@ a {
 }
 
 .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -252,6 +260,33 @@ a {
 
 .logo span {
   color: #2196f3;
+}
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0px;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+  }
+  .menu-button .icon-mobile-close {
+    display: none;
+  }
+  .menu-button.is-open .icon-mobile-close {
+    display: block;
+  }
+  .menu-button.is-open .icon-menu {
+    display: none;
+  }
 }
 
 .hero {
@@ -1019,6 +1054,7 @@ address .address-mail {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -1032,10 +1068,19 @@ address .address-mail {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  margin-left: auto;
+  margin-right: auto;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .data-modal {
+    max-width: 450px;
+    width: 100%;
+  }
 }
 
 .data-modal-close {
@@ -1069,6 +1114,10 @@ address .address-mail {
   width: 18px;
 }
 
+.modal-form {
+  padding: 40px;
+}
+
 .modal-form * {
   display: block;
 }
@@ -1080,7 +1129,7 @@ address .address-mail {
 
 .modal-form .comment {
   resize: none;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   margin-bottom: 20px;
@@ -1141,10 +1190,17 @@ address .address-mail {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
-  line-height: 1.71;
   color: #757575;
+}
+
+@media screen and (min-width: 769px) {
+  .modal-form .modal-agreement {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form-field {
@@ -1169,21 +1225,28 @@ address .address-mail {
 
 .modal-agreement .icon-check {
   display: inline-block;
-  width: 16px;
+  min-width: 16px;
   height: 15px;
   border: 1px solid #212121;
   border-radius: 2px;
-  margin-right: 8.38px;
+  margin-right: 8px;
 }
 
 .modal-agreement a {
   margin-left: 4px;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: #2196f3;
+}
+
+@media screen and (min-width: 769px) {
+  .modal-agreement a {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox {

@@ -1,6 +1,7 @@
 .page-header {
   background-color: #ffffff;
   border: 1px solid #ececec;
+  position: relative;
 }
 .header-container {
   display: flex;
@@ -9,8 +10,9 @@
   height: 59px;
 }
 .main-nav {
+  display: none;
   position: absolute;
-  top: 59px;
+  top: 100%;
   left: 0;
   z-index: 2;
   width: 100%;
@@ -25,6 +27,9 @@
     line-height: 21px;
     letter-spacing: 0.02em;
   }
+  &.is-open {
+    display: block;
+  }
 
   .item :hover,
   .item :focus {
@@ -32,14 +37,14 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
 
-  @media screen and (min-width: 481px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
   }
 }
 
 .contacts {
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) {
     display: flex;
   }
   margin-left: auto;
@@ -48,7 +53,7 @@
     margin-bottom: 16px;
   }
   .item {
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1600px) {
       display: inline-flex;
       align-items: center;
       padding-top: 32px;
@@ -59,7 +64,7 @@
     // line-height: 16px;
     // letter-spacing: 0.02em;
   }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1600px) {
     .item:not(:last-child) {
       margin-right: 50px;
     }
@@ -92,7 +97,7 @@
 }
 .site-nav {
   margin-bottom: 60px;
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1600px) {
     display: flex;
     margin-left: 93px;
   }
@@ -103,13 +108,13 @@
     position: relative;
     display: inline-block;
   }
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 1600px) {
     .item:not(:last-child) {
       margin-right: 50px;
     }
   }
   a {
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 1600px) {
       padding-top: 32px;
       padding-bottom: 32px;
       font-size: 14px;
@@ -138,8 +143,8 @@
   }
 }
 .logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  // padding-top: 24px;
+  // padding-bottom: 25px;
 
   font-family: Raleway;
   font-weight: 700;
@@ -149,5 +154,28 @@
 
   span {
     color: $main-color;
+  }
+}
+@media (max-width: 768px) {
+  .menu-button {
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 0px;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+
+    .icon-mobile-close {
+      display: none;
+    }
+    &.is-open .icon-mobile-close {
+      display: block;
+    }
+    &.is-open .icon-menu {
+      display: none;
+    }
   }
 }

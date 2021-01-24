@@ -4,6 +4,9 @@ body {
   text-decoration: none;
   color: #212121;
 }
+.modal-open {
+  overflow: hidden;
+}
 img {
   display: block;
   max-width: 100%;
