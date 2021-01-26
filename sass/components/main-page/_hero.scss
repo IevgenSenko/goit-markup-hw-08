@@ -4,7 +4,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -19,13 +19,24 @@
   background-repeat: no-repeat;
   background-position: center;
   max-width: 480px;
-  @media screen and (min-width: 768px) {
+  height: 400px;
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../img/fon-tablet.jpg);
+    max-width: 1200px;
+    height: 400px;
+  }
+  @media screen and (min-width: 769px) {
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url(../img/fon.jpg);
     max-width: 1600px;
+    height: 600px;
   }
   > h1 {
     font-weight: 900;
@@ -39,7 +50,7 @@
     margin-left: auto;
     margin-right: auto;
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
       font-size: 44px;
       line-height: 1.36;
     }
