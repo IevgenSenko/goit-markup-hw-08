@@ -1,6 +1,13 @@
 .sort {
-  padding-top: 94px;
-  padding-bottom: 34px;
+  padding-top: 60px;
+  padding-bottom: 24px;
+  @media screen and (min-width: 768px) {
+    padding-bottom: 14px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 34px;
+  }
   button {
     text-align: center;
 
@@ -8,6 +15,7 @@
     padding-bottom: 6px;
     padding-right: 22px;
     padding-left: 22px;
+    margin-bottom: 16px;
 
     background: #f5f4fa;
     border-radius: 4px;
@@ -33,7 +41,11 @@
 }
 .sort-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    flex-wrap: inherit;
+    justify-content: center;
+  }
 }
 .sort-list .item:not(:last-child) {
   margin-right: 8px;

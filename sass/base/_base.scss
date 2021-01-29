@@ -35,13 +35,15 @@ body a {
   text-decoration: none;
 }
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  @media screen and (max-width: 1199px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 1201px) {
+  @media screen and (min-width: 1200px) {
     width: 1170px;
   }
 }

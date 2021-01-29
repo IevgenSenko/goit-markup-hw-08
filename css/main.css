@@ -41,13 +41,18 @@ body a {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (min-width: 1201px) {
+@media screen and (max-width: 1199px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .container {
     width: 1170px;
   }
@@ -1011,8 +1016,21 @@ address .address-mail {
 }
 
 .sort {
-  padding-top: 94px;
-  padding-bottom: 34px;
+  padding-top: 60px;
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .sort {
+    padding-bottom: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .sort {
+    padding-top: 94px;
+    padding-bottom: 34px;
+  }
 }
 
 .sort button {
@@ -1021,6 +1039,7 @@ address .address-mail {
   padding-bottom: 6px;
   padding-right: 22px;
   padding-left: 22px;
+  margin-bottom: 16px;
   background: #f5f4fa;
   border-radius: 4px;
   border-color: #f5f4fa;
@@ -1046,9 +1065,18 @@ address .address-mail {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .sort-list {
+    -ms-flex-wrap: inherit;
+        flex-wrap: inherit;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .sort-list .item:not(:last-child) {
@@ -1056,7 +1084,13 @@ address .address-mail {
 }
 
 .cards {
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .cards {
+    padding-bottom: 94px;
+  }
 }
 
 .cards-sort {
@@ -1074,31 +1108,36 @@ address .address-mail {
   margin-bottom: 4px;
 }
 
-.cards-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .cards-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .cards-list .item {
-  width: calc((100% - 60px) / 3);
-  height: 404px;
+  max-width: 450px;
   background: #ffffff;
   border: 1px solid #eeeeee;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-right: 30px;
-  margin-bottom: 30px;
 }
 
-.cards-list .item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.cards-list .item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+@media screen and (min-width: 1201px) {
+  .cards-list .item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+  .cards-list .item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .cards-list .item:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
 }
 
 .cards-list .item-name {
@@ -1177,7 +1216,7 @@ address .address-mail {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .data-modal {
     max-width: 450px;
     width: 100%;
@@ -1297,7 +1336,7 @@ address .address-mail {
   color: #757575;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .modal-form .modal-agreement {
     font-size: 14px;
     line-height: 1.71;
@@ -1343,7 +1382,7 @@ address .address-mail {
   color: #2196f3;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1200px) {
   .modal-agreement a {
     font-size: 14px;
     line-height: 1.71;

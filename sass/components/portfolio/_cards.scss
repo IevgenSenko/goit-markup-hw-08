@@ -1,5 +1,8 @@
 .cards {
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+  }
 }
 .cards-sort {
   font-size: 16px;
@@ -16,26 +19,31 @@
   margin-bottom: 4px;
 }
 .cards-list {
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .item {
-    width: calc((100% - 60px) / 3);
-    height: 404px;
+    max-width: 450px;
     background: #ffffff;
     border: 1px solid #eeeeee;
     box-sizing: border-box;
 
-    @extend %transition;
+    @media screen and (min-width: 1201px) {
+      width: calc((100% - 60px) / 3);
+      margin-right: 30px;
+      margin-bottom: 30px;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+      }
+    }
 
-    margin-right: 30px;
-    margin-bottom: 30px;
+    @extend %transition;
   }
-  .item:nth-child(3n) {
-    margin-right: 0;
-  }
-  .item:nth-last-child(-n + 3) {
-    margin-bottom: 0;
-  }
+
   .item-name {
     padding: 20px 24px;
   }
