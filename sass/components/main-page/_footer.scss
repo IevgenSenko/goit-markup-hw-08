@@ -1,5 +1,5 @@
 .footer {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     text-align: center;
   }
   .logo {
@@ -10,17 +10,17 @@
     color: #ffffff;
   }
   .footer-tablet-container {
-    @media screen and (min-width: 769px) {
+    @media screen and (min-width: 768px) {
       display: flex;
     }
-    @media screen and (min-width: 769px) and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       justify-content: space-around;
       align-items: flex-start;
     }
   }
 }
 footer {
-  @media screen and (min-width: 1201px) {
+  @media screen and (min-width: 1200px) {
     .container {
       display: flex;
     }
@@ -40,7 +40,7 @@ footer {
   }
 }
 address {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
     margin-bottom: 60px;
   }
@@ -81,13 +81,13 @@ address {
   // }
 }
 .join-webs {
-  @media screen and (min-width: 1201px) {
+  @media screen and (min-width: 1200px) {
     margin-left: 70px;
     margin-bottom: 0;
   }
 }
 .footer-form {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     margin-top: 60px;
   }
   margin-left: auto;
@@ -100,11 +100,11 @@ address {
   }
 }
 .form-subs {
-  @media screen and (min-width: 1201px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
   }
   .btn {
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       margin-right: auto;
       margin-left: auto;
       margin-top: 20px;
